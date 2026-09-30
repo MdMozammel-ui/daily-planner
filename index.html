@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Daily Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="header">
+
+            <div>
+                <h1>📅 My Daily Planner</h1>
+                <p id="currentDate"></p>
+            </div>
+
+            <button id="themeBtn" type="button">
+                🌙
+            </button>
+
+        </header>
+
+
+        <!-- ================= TODAY PROGRESS ================= -->
+
+        <section class="progress-section">
+
+            <div class="progress-top">
+
+                <div>
+                    <p class="small-title">
+                        Today's Progress
+                    </p>
+
+                    <h2 id="progressText">
+                        0 / 0 Completed
+                    </h2>
+                </div>
+
+                <div class="progress-percent">
+                    <span id="progressPercent">
+                        0%
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    id="progressFill"
+                    class="progress-fill">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUMMARY ================= -->
+
+        <section class="summary">
+
+            <!-- Sleep -->
+
+            <div class="summary-card">
+
+                <span>😴</span>
+
+                <div>
+                    <p>Sleep</p>
+                    <h2 id="sleepHours">0h</h2>
+                </div>
+
+            </div>
+
+
+            <!-- Coding -->
+
+            <div class="summary-card">
+
+                <span>💻</span>
+
+                <div>
+                    <p>Coding</p>
+                    <h2 id="codingHours">0h</h2>
+                </div>
+
+            </div>
+
+
+            <!-- Study -->
+
+            <div class="summary-card">
+
+                <span>📚</span>
+
+                <div>
+                    <p>Study</p>
+                    <h2 id="studyHours">0h</h2>
+                </div>
+
+            </div>
+
+
+            <!-- Thesis -->
+
+            <div class="summary-card">
+
+                <span>📝</span>
+
+                <div>
+                    <p>Thesis</p>
+                    <h2 id="thesisHours">0h</h2>
+                </div>
+
+            </div>
+
+
+            <!-- Exercise -->
+
+            <div class="summary-card">
+
+                <span>⚽</span>
+
+                <div>
+                    <p>Exercise</p>
+                    <h2 id="exerciseHours">0h</h2>
+                </div>
+
+            </div>
+
+
+            <!-- Work -->
+
+            <div class="summary-card">
+
+                <span>💼</span>
+
+                <div>
+                    <p>Work</p>
+                    <h2 id="workHours">0h</h2>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DAILY OVERVIEW ================= -->
+
+        <section class="overview">
+
+            <div class="section-title">
+
+                <h2>📊 Today's Overview</h2>
+
+                <span id="productivePercent">
+                    0% planned productive time
+                </span>
+
+            </div>
+
+
+            <div class="overview-bar">
+
+                <div
+                    id="codingBar"
+                    class="bar coding">
+                </div>
+
+                <div
+                    id="studyBar"
+                    class="bar study">
+                </div>
+
+                <div
+                    id="thesisBar"
+                    class="bar thesis">
+                </div>
+
+                <div
+                    id="workBar"
+                    class="bar work">
+                </div>
+
+                <div
+                    id="exerciseBar"
+                    class="bar exercise">
+                </div>
+
+                <div
+                    id="sleepBar"
+                    class="bar sleep">
+                </div>
+
+                <div
+                    id="personalBar"
+                    class="bar personal">
+                </div>
+
+            </div>
+
+
+            <div class="legend">
+
+                <span>
+                    <i class="coding-dot"></i>
+                    Coding
+                </span>
+
+                <span>
+                    <i class="study-dot"></i>
+                    Study
+                </span>
+
+                <span>
+                    <i class="thesis-dot"></i>
+                    Thesis
+                </span>
+
+                <span>
+                    <i class="work-dot"></i>
+                    Work
+                </span>
+
+                <span>
+                    <i class="exercise-dot"></i>
+                    Exercise
+                </span>
+
+                <span>
+                    <i class="sleep-dot"></i>
+                    Sleep
+                </span>
+
+                <span>
+                    <i class="personal-dot"></i>
+                    Personal
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ADD DAILY TASK ================= -->
+
+        <section class="add-section">
+
+            <h2>➕ Add Daily Task</h2>
+
+            <p class="section-description">
+                Add a task once. It will automatically appear every day.
+            </p>
+
+
+            <form id="routineForm">
+
+                <!-- Task Name -->
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Example: Web Development"
+                    required
+                >
+
+
+                <!-- Time -->
+
+                <div class="time-inputs">
+
+                    <div>
+
+                        <label for="startInput">
+                            Start Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="startInput"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div>
+
+                        <label for="endInput">
+                            End Time
+                        </label>
+
+                        <input
+                            type="time"
+                            id="endInput"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Category -->
+
+                <select id="categoryInput">
+
+                    <option value="Coding">
+                        💻 Web Development
+                    </option>
+
+                    <option value="Study">
+                        📚 Academic Study
+                    </option>
+
+                    <option value="Thesis">
+                        📝 Thesis / Research
+                    </option>
+
+                    <option value="Work">
+                        💼 Tuition / Work
+                    </option>
+
+                    <option value="Exercise">
+                        ⚽ Exercise
+                    </option>
+
+                    <option value="Sleep">
+                        😴 Sleep
+                    </option>
+
+                    <option value="Personal">
+                        🏠 Personal
+                    </option>
+
+                </select>
+
+
+                <button
+                    type="submit"
+                    class="add-btn">
+                    Add Daily Task
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ================= DAILY TASKS ================= -->
+
+        <section class="timeline-section">
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2>🕐 Today's Tasks</h2>
+
+                    <p class="section-description">
+                        Complete a task after finishing it.
+                    </p>
+
+                </div>
+
+                <span id="routineCount">
+                    0 tasks
+                </span>
+
+            </div>
+
+
+            <div id="timeline"></div>
+
+
+            <div
+                id="emptyMessage"
+                class="empty">
+
+                <h2>📅 No daily tasks yet</h2>
+
+                <p>
+                    Add your first daily task above.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <button
+                id="resetToday"
+                type="button">
+                🔄 Reset Today's Progress
+            </button>
+
+
+            <button
+                id="clearAll"
+                type="button">
+                🗑️ Delete All Tasks
+            </button>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

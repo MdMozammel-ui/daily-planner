@@ -1,0 +1,1170 @@
+/* ========================================
+   RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   VARIABLES
+======================================== */
+
+:root {
+
+    --bg: #f1f5f9;
+
+    --card: #ffffff;
+
+    --text: #0f172a;
+
+    --muted: #64748b;
+
+    --border: #e2e8f0;
+
+    --green: #22c55e;
+
+    --green-dark: #16a34a;
+
+    --red: #ef4444;
+
+    --yellow: #facc15;
+
+    --blue: #3b82f6;
+
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    padding: 30px 15px;
+
+    transition: 0.3s;
+
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.header h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.header p {
+
+    color: var(--muted);
+
+}
+
+
+#themeBtn {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    background: var(--card);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+}
+
+
+/* ========================================
+   PROGRESS SECTION
+======================================== */
+
+.progress-section {
+
+    background: var(--card);
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.progress-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+.small-title {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+
+}
+
+
+#progressText {
+
+    font-size: 24px;
+
+}
+
+
+.progress-percent {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 50%;
+
+    background: #dcfce7;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.progress-percent span {
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: #15803d;
+
+}
+
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 12px;
+
+    border-radius: 20px;
+
+    background: var(--border);
+
+    overflow: hidden;
+
+}
+
+
+.progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: var(--green);
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+
+}
+
+
+/* ========================================
+   SUMMARY
+======================================== */
+
+.summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.summary-card {
+
+    background: var(--card);
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.summary-card > span {
+
+    font-size: 30px;
+
+}
+
+
+.summary-card p {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.summary-card h2 {
+
+    font-size: 22px;
+
+}
+
+
+/* ========================================
+   COMMON SECTIONS
+======================================== */
+
+.overview,
+.add-section,
+.timeline-section {
+
+    background: var(--card);
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.section-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    gap: 15px;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 20px;
+
+}
+
+
+.section-title > span {
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+}
+
+
+.section-description {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 5px;
+
+}
+
+
+/* ========================================
+   OVERVIEW BAR
+======================================== */
+
+.overview-bar {
+
+    width: 100%;
+
+    height: 30px;
+
+    display: flex;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: var(--border);
+
+}
+
+
+.bar {
+
+    height: 100%;
+
+    transition: 0.4s;
+
+}
+
+
+.coding {
+
+    background: #3b82f6;
+
+}
+
+
+.study {
+
+    background: #8b5cf6;
+
+}
+
+
+.thesis {
+
+    background: #ec4899;
+
+}
+
+
+.work {
+
+    background: #f59e0b;
+
+}
+
+
+.exercise {
+
+    background: #ef4444;
+
+}
+
+
+.sleep {
+
+    background: #64748b;
+
+}
+
+
+.personal {
+
+    background: #22c55e;
+
+}
+
+
+/* ========================================
+   LEGEND
+======================================== */
+
+.legend {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-top: 15px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+}
+
+
+.legend span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+}
+
+
+.legend i {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    display: inline-block;
+
+}
+
+
+.coding-dot {
+
+    background: #3b82f6;
+
+}
+
+
+.study-dot {
+
+    background: #8b5cf6;
+
+}
+
+
+.thesis-dot {
+
+    background: #ec4899;
+
+}
+
+
+.work-dot {
+
+    background: #f59e0b;
+
+}
+
+
+.exercise-dot {
+
+    background: #ef4444;
+
+}
+
+
+.sleep-dot {
+
+    background: #64748b;
+
+}
+
+
+.personal-dot {
+
+    background: #22c55e;
+
+}
+
+
+/* ========================================
+   FORM
+======================================== */
+
+#routineForm {
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: var(--card);
+
+    color: var(--text);
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: var(--green);
+
+}
+
+
+.time-inputs {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+}
+
+
+.time-inputs label {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+    margin-bottom: 5px;
+
+}
+
+
+.add-btn {
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+}
+
+
+.add-btn:hover {
+
+    background: var(--green-dark);
+
+}
+
+
+/* ========================================
+   TIMELINE
+======================================== */
+
+.timeline-item {
+
+    display: grid;
+
+    grid-template-columns:
+        100px 20px 1fr;
+
+    gap: 15px;
+
+    min-height: 100px;
+
+}
+
+
+.timeline-time {
+
+    text-align: right;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    padding-top: 5px;
+
+}
+
+
+.timeline-line {
+
+    position: relative;
+
+}
+
+
+.timeline-line::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 2px;
+
+    background: var(--border);
+
+}
+
+
+.timeline-dot {
+
+    width: 13px;
+
+    height: 13px;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+
+}
+
+
+.timeline-card {
+
+    background: var(--bg);
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    border: 1px solid transparent;
+
+    transition: 0.2s;
+
+}
+
+
+.timeline-card:hover {
+
+    border-color: var(--border);
+
+}
+
+
+.timeline-card.completed {
+
+    opacity: 0.65;
+
+}
+
+
+.timeline-card.completed
+.routine-name {
+
+    text-decoration: line-through;
+
+}
+
+
+/* ========================================
+   ROUTINE HEADER
+======================================== */
+
+.routine-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.routine-name {
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    word-break: break-word;
+
+}
+
+
+.category {
+
+    font-size: 12px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: var(--card);
+
+    white-space: nowrap;
+
+}
+
+
+.routine-duration {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    margin-top: 7px;
+
+}
+
+
+/* ========================================
+   ROUTINE STATUS
+======================================== */
+
+.status-text {
+
+    margin-top: 8px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.status-completed {
+
+    color: #16a34a;
+
+}
+
+
+.status-pending {
+
+    color: var(--muted);
+
+}
+
+
+/* ========================================
+   ROUTINE BUTTONS
+======================================== */
+
+.routine-actions {
+
+    margin-top: 12px;
+
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.routine-actions button {
+
+    padding: 8px 12px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.complete-btn {
+
+    background: var(--green);
+
+    color: white;
+
+}
+
+
+.complete-btn:hover {
+
+    background: var(--green-dark);
+
+}
+
+
+.undo-btn {
+
+    background: #64748b;
+
+    color: white;
+
+}
+
+
+.edit-btn {
+
+    background: var(--yellow);
+
+    color: #111827;
+
+}
+
+
+.delete-btn {
+
+    background: var(--red);
+
+    color: white;
+
+}
+
+
+/* ========================================
+   EMPTY
+======================================== */
+
+.empty {
+
+    text-align: center;
+
+    padding: 40px;
+
+    color: var(--muted);
+
+}
+
+
+.empty h2 {
+
+    margin-bottom: 8px;
+
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+}
+
+
+footer button {
+
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+#resetToday {
+
+    background: var(--yellow);
+
+    color: #111827;
+
+}
+
+
+#clearAll {
+
+    background: var(--red);
+
+    color: white;
+
+}
+
+
+/* ========================================
+   DARK MODE
+======================================== */
+
+body.dark {
+
+    --bg: #0f172a;
+
+    --card: #1e293b;
+
+    --text: #f8fafc;
+
+    --muted: #94a3b8;
+
+    --border: #334155;
+
+}
+
+
+body.dark .progress-percent {
+
+    background: #14532d;
+
+}
+
+
+body.dark .progress-percent span {
+
+    color: #86efac;
+
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 800px) {
+
+    .summary {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 15px 10px;
+
+    }
+
+
+    .header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .summary {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+
+    .summary-card {
+
+        padding: 15px;
+
+    }
+
+
+    .summary-card > span {
+
+        font-size: 24px;
+
+    }
+
+
+    .summary-card h2 {
+
+        font-size: 18px;
+
+    }
+
+
+    .time-inputs {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .timeline-item {
+
+        grid-template-columns:
+            65px 15px 1fr;
+
+        gap: 8px;
+
+    }
+
+
+    .timeline-time {
+
+        font-size: 12px;
+
+    }
+
+
+    .routine-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .section-title {
+
+        align-items: flex-start;
+
+    }
+
+
+    .legend {
+
+        gap: 10px;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+    }
+
+
+    footer button {
+
+        width: 100%;
+
+    }
+
+
+    .progress-top {
+
+        align-items: center;
+
+    }
+
+
+    #progressText {
+
+        font-size: 20px;
+
+    }
+
+
+    .progress-percent {
+
+        width: 55px;
+
+        height: 55px;
+
+    }
+
+}
